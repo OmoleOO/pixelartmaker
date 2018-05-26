@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixel Art Maker!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="wrapper">
+    <div>
+        <div>
+                <h1>Pixel Art Maker</h1>
+        
+                <h2>Choose Grid Size</h2>
+                <div>
+                    <form id="gridSize">
+                        <label class="container">Default
+                            <input type="radio" checked name="size" value="Default">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">Custom
+                            <input type="radio" name="size" value="Custom">
+                            <span class="checkmark"></span>
+                        </label>
+                    </form>
+                    <form id="sizePicker">
+                            Grid Height:
+                            <input type="number" id="inputHeight" name="height" min="5" value="10">
+                            Grid Width:
+                            <input type="number" id="inputWidth" name="width" min="5" value="10">
+                            <input type="submit" id="btn-submit">
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div class="card">
+                    
+                
+                    <h2>Pick A Color</h2>
+                    <input type="color" id="colorPicker">
+        
+                    <div id="info">
+                        <ul class="help-info">
+                            <li id="help"><span>Help</span>
+                                <ul class="popover">
+                                    <li><kbd>Ctrl</kbd> + drag mouse over grid to draw</li>
+                                    <li><kbd>Shift</kbd> + drag mouse over grid to erase</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                
+                    <h2>Design Canvas</h2>
+                    <table id="pixelCanvas"></table>
+                </div>
+            </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="designs.js"></script>
+</body>
+</html>

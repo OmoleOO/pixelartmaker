@@ -1,0 +1,208 @@
+body, html {
+    height: 100%;
+}
+
+body {
+    text-align: center;
+    background: linear-gradient(to right, rgb(251, 217, 0), rgb(255, 217, 0),  rgb(255, 219, 0));
+}
+
+h1 {
+    font-family: Monoton;
+    font-weight: 400;
+    font-size: 70px;
+    margin: 0.2em;
+}
+
+h2 {
+    margin: 0 0 0.25em;
+}
+
+h2:first-of-type {
+    margin-top: 0.5em;
+}
+
+table,
+tr,
+td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+tr {
+    height: 20px;
+}
+
+td {
+    width: 20px;
+}
+
+input[type=number] {
+    width: 8em;
+    height: 2.6em;
+    padding: 0 5px;
+    border: 1px solid #403700;
+    border-radius: 4px;
+}
+
+/* custom css */
+* {
+    box-sizing: border-box;
+}
+
+#btn-submit {
+    padding: 10px;
+    height: 2.6em;
+    background: #403700;
+    color: white;
+    border: 1px solid #403700;
+    border-radius: 4px;
+}
+
+#btn-submit:hover {
+    color: black;
+    border: 1px solid #403700;
+    background: none;
+}
+
+.card {
+    width: 60%;
+    height: auto;
+    margin: 5px auto;
+    background: white;
+    border: 1px solid rgb(255, 252, 252);
+    border-radius: 6px;
+    padding: 10px 20px 30px;
+    box-shadow: 3px 1px 2px 0 rgba(212, 181, 1, 0.7);
+}
+
+.help-info > li {
+    list-style: none;
+}
+
+#help > span {
+    z-index: 10;
+    cursor: pointer;
+    display: block;
+}
+
+#help {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    color: white;
+    background: rgb(59, 54, 39);
+    padding: 10px;
+    font-size: 0.7em;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-left: -40px;
+}
+
+ #help:hover .popover {
+    top: 20px;
+    left: 30px;
+    display: block;
+    z-index: 10000;
+    position: absolute;
+    color: black;
+    background: white;
+    border: 1px solid rgb(255, 252, 252);
+    border-radius: 6px;
+    padding: 10px 20px;
+    box-shadow: 3px 3px 5px 0 rgba(95, 94, 91, 0.7);
+    width: 300px;
+    font-size: 1.3em;
+    line-height: 24px;
+}
+
+.popover {
+    display: none;
+}
+
+.popover li {
+    list-style: none;
+}
+
+
+#gridSize {
+    margin: 10px auto;
+}
+
+/* The container */
+.container {
+    position: relative;
+    padding: 0 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+
+.wrapper {
+    display: flex;  
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .wrapper > * {
+    padding: 5px;
+    flex: 1 100%;
+  }
