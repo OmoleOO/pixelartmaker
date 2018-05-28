@@ -5,6 +5,7 @@ $(function(){
     function makeGrid(h, w){
         var height = h || 15; width = w || 30;
         var table = $('#pixelCanvas');
+        table.children().remove();
 
         for (var x = 1; x <= height; x++){
             var tr = $('<tr></tr>');
