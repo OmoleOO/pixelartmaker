@@ -194,13 +194,13 @@ input[type=number] {
 
 /* Create a custom radio button */
 .checkmark {
+    left: 6px;
+    top: 2px;
     position: absolute;
     height: 25px;
     width: 25px;
     background-color: #eee;
     border-radius: 50%;
-    left: 6px;
-    top: 2px;
 }
 
 /* On mouse-over, add a grey background color */
