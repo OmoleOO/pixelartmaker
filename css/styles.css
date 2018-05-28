@@ -104,20 +104,40 @@ input[type=number] {
 }
 
  #help:hover .popover {
-    top: 20px;
-    left: 30px;
+    top: -20px;
+    left: 60px;
     display: block;
     z-index: 10000;
     position: absolute;
     color: black;
     background: white;
-    border: 1px solid rgb(255, 252, 252);
+    border-top: 1px solid rgb(255, 252, 252);
+    border-right: 1px solid rgb(255, 252, 252);
+    border-bottom: 1px solid rgb(255, 252, 252);
     border-radius: 6px;
-    padding: 10px 20px;
-    box-shadow: 3px 3px 5px 0 rgba(95, 94, 91, 0.7);
+    padding: 10px 10px;
+    box-shadow: 3px 3px 13px 0 rgba(95, 94, 91, 0.7);
     width: 300px;
     font-size: 1.3em;
     line-height: 24px;
+}
+
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 12.5px solid transparent;
+    border-right: 25px solid #fff;
+    border-bottom: 20.5px solid transparent;
+    position: relative;
+    top: 13px;
+    left: -31px;
+    z-index: 9999;
+    float: left;
+}
+
+.clear-float {
+    float: none;
 }
 
 .popover {
@@ -126,6 +146,7 @@ input[type=number] {
 
 .popover li {
     list-style: none;
+    display: flex;
 }
 
 
