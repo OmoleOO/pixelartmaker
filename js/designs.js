@@ -1,6 +1,9 @@
 
-$(function(){
 
+ 
+
+$(function(){
+    var chosenColour = $('#colorPicker').val();
 
     function makeGrid(h, w){
         var height = h || 15; width = w || 30;
@@ -40,12 +43,40 @@ $(function(){
         makeGrid(inputHeight, inputWidth);
     });
 
+    //Colour Palette
+    var colours = [];
+
+    $('#colorPicker').on('change', function(){
+        colours.splice(0, 0, $(this).val());
+        var palette = $('.palette');
+        palette.children().remove();
+
+        colours.forEach(function(colour, index, colours){
+            if (index <= 4){
+                var tr = $('<tr style="background-color: '+colour+'"></tr>');
+                tr.append('<td style="padding: 10px">' + colour + '</td>')
+                palette.append(tr);
+            }
+        });
+
+        chosenColour = $('#colorPicker').val();
+
+        $('.palette').on('click', 'tr', function(evt){
+            $(evt.target).css('cursor', 'pointer');
+            chosenColour = $(this).css('background-color');
+        })
+    })
+
+   
+
+  
+
     // Grid controls
     // Ctrl + mouseover grid to draw
     // Shift + mouseover grid to erase
     $('#pixelCanvas').on('mouseover', 'td', function(evt){
         if (evt.ctrlKey){
-            $( evt.target ).css('background-color', $('#colorPicker').val());
+            $( evt.target ).css('background-color', chosenColour);
         } else if (evt.shiftKey){
             $( evt.target ).css('background-color', '#fff');
         }

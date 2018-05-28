@@ -69,10 +69,28 @@ input[type=number] {
     background: none;
 }
 
-.card {
-    width: 60%;
+.height-auto {
     height: auto;
-    margin: 5px auto;
+}
+
+.height-custom {
+    height: 68%;
+}
+
+.palette td {
+    padding: 20px 25px !important;
+    cursor: pointer;
+}
+
+.palette td:hover {
+    cursor: pointer;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+
+.card {
+    margin: 15px 2px;
     background: white;
     border: 1px solid rgb(255, 252, 252);
     border-radius: 6px;
@@ -215,15 +233,39 @@ input[type=number] {
 	background: white;
 }
 
+.width-60 {
+    width: 60%;
+}
 
-.wrapper {
-    display: flex;  
-    flex-flow: row wrap;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  .wrapper > * {
-    padding: 5px;
-    flex: 1 100%;
-  }
+.header-container {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    width: 900px;
+}
+
+.grid-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.grid-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

@@ -6,39 +6,59 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="wrapper">
-    <div>
-        <div>
-                <h1>Pixel Art Maker</h1>
-        
+<body>
+    <div class="header-container">
+        <div class="header">
+            <h1>Pixel Art Maker</h1>
+        </div>
+    </div>
+    <div class="grid-form-container">
+        <div class="grid-form">
                 <h2>Choose Grid Size</h2>
-                <div>
-                    <form id="gridSize">
-                        <label class="container">Default
-                            <input type="radio" checked name="size" value="Default">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container">Custom
-                            <input type="radio" name="size" value="Custom">
-                            <span class="checkmark"></span>
-                        </label>
-                    </form>
-                    <form id="sizePicker">
-                            Grid Height:
-                            <input type="number" id="inputHeight" name="height" min="5" value="10">
-                            Grid Width:
-                            <input type="number" id="inputWidth" name="width" min="5" value="10">
-                            <input type="submit" id="btn-submit">
-                    </form>
+                <form id="gridSize">
+                    <label class="container">Default
+                        <input type="radio" checked name="size" value="Default">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Custom
+                        <input type="radio" name="size" value="Custom">
+                        <span class="checkmark"></span>
+                    </label>
+                </form>
+                <form id="sizePicker">
+                        Grid Height:
+                        <input type="number" id="inputHeight" name="height" min="5" value="10">
+                        Grid Width:
+                        <input type="number" id="inputWidth" name="width" min="5" value="10">
+                        <input type="submit" id="btn-submit">
+                </form>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="grid">
+                <div class="card height-custom">
+                    <h2>My colour palette</h2>
+                    <table class="palette">
+                        <!-- <tr>
+                            <td>colour</td>
+                        </tr>
+                        <tr>
+                            <td>colour</td>
+                        </tr>
+                        <tr>
+                            <td>colour</td>
+                        </tr>
+                        <tr>
+                            <td>colour</td>
+                        </tr>
+                        <tr>
+                            <td>colour</td>
+                        </tr> -->
+                    </table>
                 </div>
-            </div>
-            <div>
-                <div class="card">
-                    
-                
+                <div class="card width-60 height-auto">
                     <h2>Pick A Color</h2>
                     <input type="color" id="colorPicker">
-        
                     <div id="info">
                         <ul class="help-info">
                             <li id="help"><span>Help</span>
@@ -51,7 +71,6 @@
                             </li>
                         </ul>
                     </div>
-                
                     <h2>Design Canvas</h2>
                     <table id="pixelCanvas"></table>
                 </div>
