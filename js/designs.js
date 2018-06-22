@@ -3,17 +3,17 @@
  
 
 $(function(){
-    var chosenColour = $('#colorPicker').val();
+    let chosenColour = $('#colorPicker').val();
 
     function makeGrid(h, w){
-        var height = h || 15; width = w || 30;
-        var table = $('#pixelCanvas');
+        let height = h || 15; width = w || 30;
+        let table = $('#pixelCanvas');
         table.children().remove();
 
-        for (var x = 1; x <= height; x++){
-            var tr = $('<tr></tr>');
+        for (let x = 1; x <= height; x++){
+            let tr = $('<tr></tr>');
             table.append(tr);
-            for (var j = 1; j <= width; j++) {
+            for (let j = 1; j <= width; j++) {
                 tr.append('<td></td>');
             } 
         }  
@@ -31,57 +31,47 @@ $(function(){
         } else {
             $('#sizePicker').show();
             $('#pixelCanvas').children().remove();
-
         }
     });
 
     // Draw custom grid
     $('#btn-submit').on('click', function(evt){
         evt.preventDefault();
-        var inputHeight = $('#inputHeight').val(); 
-        var inputWidth = $('#inputWidth').val();
+        let inputHeight = $('#inputHeight').val(); 
+        let inputWidth = $('#inputWidth').val();
         makeGrid(inputHeight, inputWidth);
     });
 
     //Colour Palette
-    var colours = [];
+    let colours = [];
+    let palette = $('.palette');
 
-    $('#colorPicker').on('change', function(){
-        if (colours.indexOf($(this).val()) === -1){
+    $('#colorPicker').on('change', function(){ // Monitors colorPicker
+        chosenColour = $('#colorPicker').val();
+        if (!colours.includes($(this).val())){ // Add new colour to palette
             colours.splice(0, 0, $(this).val());
         }
-        var palette = $('.palette');
         palette.children().remove();
 
-        
-
         colours.forEach(function(colour, index, colours){
-            if (index <= 7){
-                var tr = $('<tr style="background-color: '+colour+'"></tr>');
-                tr.append('<td style="padding: 10px">' + colour + '</td>')
+            if (index <= 6){ // Colour palette holds 7 recently used colours
+                let tr = $(`<tr style="background-color: ${colour}"></tr>`);
+                tr.append(`<td style="padding: 10px">${colour}</td>`)
                 palette.append(tr);
             }
         });
 
-        chosenColour = $('#colorPicker').val();
-
-        $('.palette').on('click', 'tr', function(evt){
+        $('.palette').on('click', 'tr', function(evt){ // Monitor the palette
             $(evt.target).css('cursor', 'pointer');
-            chosenColour = $(this).css('background-color');
+            chosenColour = $(this).css('background-color'); // Select colour from palette
         })
     })
 
-   
-
-  
-
     // Grid controls
-    // Ctrl + mouseover grid to draw
-    // Shift + mouseover grid to erase
     $('#pixelCanvas').on('mouseover', 'td', function(evt){
-        if (evt.ctrlKey){
+        if (evt.ctrlKey){ // Ctrl + mouseover grid to draw
             $( evt.target ).css('background-color', chosenColour);
-        } else if (evt.shiftKey){
+        } else if (evt.shiftKey){ // Shift + mouseover grid to erase
             $( evt.target ).css('background-color', '#fff');
         }
     });
