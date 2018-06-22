@@ -39,6 +39,9 @@ $(function(){
         evt.preventDefault();
         let inputHeight = $('#inputHeight').val(); 
         let inputWidth = $('#inputWidth').val();
+        if (inputHeight > 40 || inputWidth > 100){
+            break;
+        }
         makeGrid(inputHeight, inputWidth);
     });
 
