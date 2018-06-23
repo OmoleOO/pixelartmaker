@@ -1,10 +1,21 @@
-body, html {
+main, body, html {
     height: 100%;
 }
 
-body {
+body, main::before {
     text-align: center;
-    background: linear-gradient(to right, rgb(251, 217, 0), rgb(255, 217, 0),  rgb(255, 219, 0));
+    background: linear-gradient(to right, rgba(251, 234, 0, 0.76), 
+    rgba(255, 0, 0, 0.82), rgba(48, 0, 255, 0.692));
+
+}
+main {
+    position: relative;
+    background: hsla(0,0%,100%,.3);
+}
+
+main::before {
+    position: absolute;
+    filter: blur(100px);
 }
 
 h1 {
@@ -94,7 +105,7 @@ input[type=number] {
     border: 1px solid rgb(255, 252, 252);
     border-radius: 6px;
     padding: 10px 20px 30px;
-    box-shadow: 3px 1px 2px 0 rgba(212, 181, 1, 0.7);
+    box-shadow: 3px 1px 2px 0 rgba(170, 161, 110, 0.7);
 }
 
 .help-info > li {
@@ -260,13 +271,32 @@ input[type=number] {
     flex-direction: column;
 }
 
-.grid-container {
+/* .grid-container {
     display: flex;
     justify-content: center;
-}
+} */
 
 .grid {
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+
+.panoramic {
+    margin: 15px 5px;
+    width: 150px; height: 150px;
+    background-image: url("../images/pic.png");
+    background-size: auto 100%;
+    border: 2px dashed white;
+    animation: panoramic 10s linear infinite alternate;
+    animation-play-state: paused;
+}
+
+.panoramic:focus, .panoramic:hover {
+    animation-play-state: running;
+}
+
+@keyframes panoramic{
+    to {background-position: 100% 0 }
 }
