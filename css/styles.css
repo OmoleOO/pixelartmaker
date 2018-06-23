@@ -4,13 +4,14 @@ body {
 
 body, main::before {
     text-align: center;
-    /* background: linear-gradient(to right, rgba(251, 234, 0, 0.76), 
-    rgba(255, 0, 0, 0.82), rgba(48, 0, 255, 0.692)); */
-
-    background: linear-gradient(45deg,
+    /* background: linear-gradient(45deg,rgba(0, 255, 170, 0.82), rgba(48, 0, 255, 0.692));
+    background-size: 150px 100px; */
+    background: repeating-linear-gradient(45deg,
+    rgb(51, 255, 160), rgb(85, 105, 170) 30px);
+    /* background: linear-gradient(45deg,
         #fb3 25%, #58a 0, #58a 50%,
-        #fb3 0, #fb3 75%, #58a 0);
-    background-size: 42.426406871px 42.426406871px;
+        #fb3 0, #fb3 75%, #58a 0); 
+    background-size: 42.426406871px 42.426406871px; */
 
 }
 main {
