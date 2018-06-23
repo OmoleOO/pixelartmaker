@@ -1,4 +1,4 @@
-main, body {
+body {
     height: 100%;
 }
 
@@ -15,7 +15,7 @@ body, main::before {
 }
 main {
     position: relative;
-    /* height: 100vh; */
+    height: 100vh;
     background: hsla(0,0%,100%,.5);
 }
 

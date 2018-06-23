@@ -42,8 +42,10 @@ $(function(){
         if ((inputHeight > 25) || (inputWidth > 100)) {
            alert("Please use a lesser dimension"); return;
         }
-        else
+        else {
+            $('main').css('height', 'auto');
             makeGrid(inputHeight, inputWidth);
+        }
     });
 
     //Colour Palette
