@@ -6,7 +6,7 @@ $(function(){
     let chosenColour = $('#colorPicker').val();
 
     function makeGrid(h, w){
-        let height = h || 15; width = w || 30;
+        let height = h || 10; width = w || 40;
         let table = $('#pixelCanvas');
         table.children().remove();
 
@@ -39,10 +39,11 @@ $(function(){
         evt.preventDefault();
         let inputHeight = $('#inputHeight').val(); 
         let inputWidth = $('#inputWidth').val();
-        if (inputHeight > 40 || inputWidth > 100){
-            break;
+        if ((inputHeight > 25) || (inputWidth > 100)) {
+           alert("Please use a lesser dimension"); return;
         }
-        makeGrid(inputHeight, inputWidth);
+        else
+            makeGrid(inputHeight, inputWidth);
     });
 
     //Colour Palette

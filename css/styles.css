@@ -1,19 +1,26 @@
-main, body, html {
+main, body {
     height: 100%;
 }
 
 body, main::before {
     text-align: center;
-    background: linear-gradient(to right, rgba(251, 234, 0, 0.76), 
-    rgba(255, 0, 0, 0.82), rgba(48, 0, 255, 0.692));
+    /* background: linear-gradient(to right, rgba(251, 234, 0, 0.76), 
+    rgba(255, 0, 0, 0.82), rgba(48, 0, 255, 0.692)); */
+
+    background: linear-gradient(45deg,
+        #fb3 25%, #58a 0, #58a 50%,
+        #fb3 0, #fb3 75%, #58a 0);
+    background-size: 42.426406871px 42.426406871px;
 
 }
 main {
     position: relative;
-    background: hsla(0,0%,100%,.3);
+    /* height: 100vh; */
+    background: hsla(0,0%,100%,.5);
 }
 
 main::before {
+    height: 100vh;
     position: absolute;
     filter: blur(100px);
 }
@@ -78,10 +85,6 @@ input[type=number] {
     background: none;
 }
 
-.height-auto {
-    height: auto;
-}
-
 .height-custom {
     height: 250px;
     overflow-y: scroll;
@@ -101,8 +104,8 @@ input[type=number] {
 
 .card {
     margin: 15px 2px;
-    background: white;
-    border: 1px solid rgb(255, 252, 252);
+    /* background: hsla(0,0%,100%, 0.67); */
+    background: rgb(238, 238, 238);
     border-radius: 6px;
     padding: 10px 20px 30px;
     box-shadow: 3px 1px 2px 0 rgba(170, 161, 110, 0.7);
