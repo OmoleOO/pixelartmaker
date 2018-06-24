@@ -2,14 +2,14 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
+* [Introduction](#introduction)
 * [Contributing](#contributing)
 
-## Instructions
+## Introduction
 
-To get started, open `designs.js` and start building out the app's functionality.
+Create a custom grid or use the default grid, and apply colors to those squares to create your digital masterpiece.
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+Visit: https//omoleoo.github.io/pixelartmaker/
 
 ## Contributing
 
