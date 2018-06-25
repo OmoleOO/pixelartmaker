@@ -38,6 +38,9 @@ h2 {
 h2:first-of-type {
     margin-top: 0.5em;
 }
+#sizePicker {
+    display: none;
+}
 
 #pixelCanvas {
     background-color: #fff;
@@ -93,12 +96,12 @@ input[type=number] {
     overflow-y: scroll;
 }
 
-.palette td {
+#palette td {
     padding: 20px 25px !important;
     cursor: pointer;
 }
 
-.palette td:hover {
+#palette td:hover {
     cursor: pointer;
     border: 1px solid #fff;
     color: #fff;
@@ -114,10 +117,6 @@ input[type=number] {
     box-shadow: 3px 1px 2px 0 rgba(170, 161, 110, 0.7);
 }
 
-.help-info > li {
-    list-style: none;
-}
-
 #help > span {
     z-index: 10;
     cursor: pointer;
@@ -127,17 +126,28 @@ input[type=number] {
 #help {
     display: inline-block;
     cursor: pointer;
-    position: relative;
     color: white;
+    height: 40px;
     background: rgb(59, 54, 39);
     padding: 10px;
     font-size: 0.7em;
     border: 1px solid #eee;
     border-radius: 5px;
-    margin-left: -40px;
+    margin-left: 40%;
 }
 
- #help:hover .popover {
+.help-info > li {
+    list-style: none;
+    height: 0;
+    margin-left: -70px;
+}
+
+.help-info {
+    display: flex;
+    justify-content: center;
+}
+
+ /* #help:hover .popover {
     top: -20px;
     left: 60px;
     display: block;
@@ -154,10 +164,10 @@ input[type=number] {
     width: 300px;
     font-size: 1.3em;
     line-height: 24px;
-}
+} */
 
 
-.triangle {
+/* .triangle {
     width: 0;
     height: 0;
     border-top: 12.5px solid transparent;
@@ -168,20 +178,58 @@ input[type=number] {
     left: -31px;
     z-index: 9999;
     float: left;
-}
+} */
 
-.clear-float {
+/* .clear-float {
     float: none;
+} */
+
+.popover li {
+    list-style: none;
+    text-align: center;
 }
 
 .popover {
+    display: block;
+    position: relative;
+    top: 0%;
+    left: 83px;
+    max-width: 400px;
+    height: auto;
+    border: 1px dashed #000;
+    border-radius: 5px;
+    padding: 0px 15px;
+    margin: -34px auto;
+    background-color: #fff;
+    color: #000;
+}
+
+.popover::after {
+    content: '';
+    position: absolute;
+    width: 20px; 
+    height: 20px;
+    border-top: 0px solid #000;
+    border-left: 0px solid #000;
+    border-right: 1px dashed #000;
+    border-bottom: 1px dashed #000;
+    top: 66%;
+    left: 3%;
+    margin-left: -6%;
+    transform: rotate(135deg);
+    margin-top: -25px;
+    background-color:#fff;
+}
+
+
+/* .popover {
     display: none;
 }
 
 .popover li {
     list-style: none;
     display: flex;
-}
+} */
 
 
 #gridSize {
