@@ -13,7 +13,7 @@
 <p><i>This is in partial fulfillment of the requirements for the award of the Google Africa Challenge Scholarship for the Udacity Front-end Web Development Nanodegree programme.</i></p>
 
 
-<a href="https//omoleoo.github.io/pixelartmaker/">Pixel Art Maker</a>
+[Pixel Art Maker](https//omoleoo.github.io/pixelartmaker/)
 
 
 ## Instructions
@@ -23,7 +23,7 @@
 * Shift + mouseover grid to temporarily suspend painting.
 
 
-Click <a href="https//omoleoo.github.io/pixelartmaker/" target="_blank">here</a> to create your masterpiece.
+Click [here](https//omoleoo.github.io/pixelartmaker/) to create your masterpiece.
 
 
 ## Contributing
