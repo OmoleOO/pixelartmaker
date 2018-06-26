@@ -12,17 +12,8 @@ let gridSize = document.getElementById('gridSize');
 let submitBtn = document.getElementById('btn-submit');
 let clearCanvas = document.getElementById("clear-canvas");
 let gridOption = document.querySelector("input[type=radio]");
-let popover = document.querySelector(".popover");
-let helpBtn = document.getElementById("help")
 
-popover.style.visibility = 'hidden';
-helpBtn.addEventListener("mouseover", function(evt){
-    popover.style.visibility = 'visible';
-});
 
-helpBtn.addEventListener("mouseleave", function(evt){
-    popover.style.visibility = 'hidden';
-});
 
 // Show grid by default
 if (gridOption.value == "Default"){

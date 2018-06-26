@@ -14,7 +14,7 @@ body, main::before {
 }
 main {
     position: relative;
-    height: 100vh;
+    height: 105vh;
     background: hsla(0,0%,100%,.5);
 }
 
@@ -71,7 +71,6 @@ input[type=number] {
     border-radius: 4px;
 }
 
-/* custom css */
 * {
     box-sizing: border-box;
 }
@@ -117,39 +116,25 @@ input[type=number] {
     box-shadow: 3px 1px 2px 0 rgba(170, 161, 110, 0.7);
 }
 
-#help > span {
-    z-index: 10;
-    cursor: pointer;
-    display: block;
-}
+
+/* Help Button and Popover styles */
 
 #help {
     display: inline-block;
     cursor: pointer;
+    position: relative;
     color: white;
-    height: 40px;
     background: rgb(59, 54, 39);
     padding: 10px;
     font-size: 0.7em;
     border: 1px solid #eee;
     border-radius: 5px;
-    margin-left: 40%;
+    margin-left: -40px;
 }
 
-.help-info > li {
-    list-style: none;
-    height: 0;
-    margin-left: -70px;
-}
-
-.help-info {
-    display: flex;
-    justify-content: center;
-}
-
- /* #help:hover .popover {
+ #help:hover .popover {
     top: -20px;
-    left: 60px;
+    left: 64px;
     display: block;
     z-index: 10000;
     position: absolute;
@@ -164,10 +149,19 @@ input[type=number] {
     width: 300px;
     font-size: 1.3em;
     line-height: 24px;
-} */
+}
 
+#help > span {
+    z-index: 10;
+    cursor: pointer;
+    display: block;
+}
 
-/* .triangle {
+.help-info > li {
+    list-style: none;
+}
+
+.triangle {
     width: 0;
     height: 0;
     border-top: 12.5px solid transparent;
@@ -178,58 +172,26 @@ input[type=number] {
     left: -31px;
     z-index: 9999;
     float: left;
-} */
+}
 
-/* .clear-float {
+.clear-float {
     float: none;
-} */
-
-.popover li {
-    list-style: none;
-    text-align: center;
 }
 
 .popover {
-    display: block;
-    position: relative;
-    top: 0%;
-    left: 83px;
-    max-width: 400px;
-    height: auto;
-    border: 1px dashed #000;
-    border-radius: 5px;
-    padding: 0px 15px;
-    margin: -34px auto;
-    background-color: #fff;
-    color: #000;
-}
-
-.popover::after {
-    content: '';
-    position: absolute;
-    width: 20px; 
-    height: 20px;
-    border-top: 0px solid #000;
-    border-left: 0px solid #000;
-    border-right: 1px dashed #000;
-    border-bottom: 1px dashed #000;
-    top: 66%;
-    left: 3%;
-    margin-left: -6%;
-    transform: rotate(135deg);
-    margin-top: -25px;
-    background-color:#fff;
-}
-
-
-/* .popover {
     display: none;
 }
 
 .popover li {
     list-style: none;
     display: flex;
-} */
+}
+
+.popover li p {
+    margin-left: -20px;
+}
+
+/* End of Help button and popover style */
 
 
 #gridSize {
