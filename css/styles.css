@@ -116,6 +116,22 @@ input[type=number] {
     box-shadow: 3px 1px 2px 0 rgba(170, 161, 110, 0.7);
 }
 
+#clear-canvas {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #2196F3;
+    padding: 10px;
+    height: 2.6em;
+    width: 10.3em;
+    margin: 10px auto 0;
+    -moz-appearance: button;
+    -webkit-appearance: button;
+}
+
+.active {
+    border: 2px dashed #fff;
+}
 
 /* Help Button and Popover styles */
 
@@ -193,11 +209,6 @@ input[type=number] {
 
 /* End of Help button and popover style */
 
-
-#gridSize {
-    margin: 10px auto;
-}
-
 /* The container */
 .container {
     position: relative;
@@ -261,6 +272,10 @@ input[type=number] {
 	background: white;
 }
 
+#gridSize {
+    margin: 10px auto;
+}
+
 .width-60 {
     width: 60%;
 }
@@ -287,17 +302,12 @@ input[type=number] {
     flex-direction: column;
 }
 
-/* .grid-container {
-    display: flex;
-    justify-content: center;
-} */
 
 .grid {
     display: flex;
     justify-content: center;
     width: 100%;
 }
-
 
 .panoramic {
     margin: 15px 5px;

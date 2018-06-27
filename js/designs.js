@@ -34,9 +34,11 @@ gridSize.addEventListener("change", function(evt) {
         sizePicker.style.display = 'none';
         makeGrid();
         gridControl();
+        document.getElementById("clear-canvas").style.display = 'block';
     } else {
         sizePicker.style.display = 'block';
         clearTableRows("#pixelCanvas tr");
+        document.getElementById("clear-canvas").style.display = 'none';
     }
 });
 
@@ -58,6 +60,7 @@ submitBtn.addEventListener('click', function(evt){
         document.getElementsByTagName("main")[0].style.height = 'auto';
         makeGrid(inputHeight, inputWidth);
         gridControl();
+        document.getElementById("clear-canvas").style.display = 'block';
     }
 });
 
@@ -86,17 +89,17 @@ colorPicker.addEventListener('change', function(){
     });
 
     // Monitor the palette
-    let paletteCells = document.querySelectorAll('#palette tr');
+    let paletteCells = document.querySelectorAll('#palette td');
     paletteCells.forEach(cell => cell.addEventListener('click', function(evt){ 
         evt.target.style.cursor = 'pointer';
         // Select colour from palette
-        chosenColour = evt.target.style.backgroundColor;
+        chosenColour =  evt.target.style.backgroundColor;
     }));
 });
 
 /**
  * @description Clear table rows
- * @param {*String query selector} querySelector
+ * @param {*querySelector query selector}
  */
 function clearTableRows(querySelector){
     document.querySelectorAll(querySelector)
@@ -135,12 +138,15 @@ function gridControl(){
     gridCells.forEach(cell => cell.addEventListener('mouseover', function(evt){ 
         if (evt.shiftKey){ 
             // To suspend painting: Shift + mouseover grid
+            evt.target.style.cursor = 'not-allowed';
             return false;
         } else if (evt.ctrlKey){ 
             // To erase: Ctrl + mouseover grid
             evt.target.style.backgroundColor = '';
+            evt.target.style.cursor = 'cell';
         } else {
             // To paint: mouseover grid
+            evt.target.style.cursor = 'crosshair';
             evt.target.style.backgroundColor = chosenColour;
         }
     }));
