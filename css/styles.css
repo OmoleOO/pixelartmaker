@@ -1,27 +1,11 @@
-body {
-    height: 100%;
-}
 
-body, main::before {
+
+body { 
     text-align: center;
     background: linear-gradient(45deg,rgba(0, 255, 170, 0.82), rgba(48, 0, 255, 0.692));
-    
-    /* background: linear-gradient(45deg,
-        #fb3 25%, #58a 0, #58a 50%,
-        #fb3 0, #fb3 75%, #58a 0); 
-    background-size: 42.426406871px 42.426406871px; */
-
-}
-main {
-    position: relative;
-    height: 105vh;
-    background: hsla(0,0%,100%,.5);
-}
-
-main::before {
-    height: 100vh;
-    position: absolute;
-    filter: blur(100px);
+    height: 100%; width: 100%;
+    overflow-x: hidden;
+    padding-bottom: 10%;
 }
 
 h1 {
@@ -124,6 +108,7 @@ input[type=number] {
     padding: 10px;
     height: 2.6em;
     width: 10.3em;
+    cursor: pointer;
     margin: 10px auto 0;
     -moz-appearance: button;
     -webkit-appearance: button;
@@ -247,7 +232,7 @@ input[type=number] {
 
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
-    background-color: #2196F3;
+    background-color: rgb(118, 15, 187);
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */

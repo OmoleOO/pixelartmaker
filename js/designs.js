@@ -49,15 +49,14 @@ submitBtn.addEventListener('click', function(evt){
     let inputHeight = document.getElementById("inputHeight").value; 
     let inputWidth = document.getElementById("inputWidth").value;
     let errorMsg = [
-        "Grid height should be less than 25", 
-        "Grid width should be less than 100"
+        "Grid height should be less than or equal to 25", 
+        "Grid width should be less than or equal to 100"
     ];
     if ((inputHeight > 25) || (inputWidth > 100)) {
         alert(`${inputHeight > 25 ? errorMsg[0] : ""} ${inputWidth > 100 ? errorMsg[1] : ""}`); 
         return;
     }
     else {
-        document.getElementsByTagName("main")[0].style.height = 'auto';
         makeGrid(inputHeight, inputWidth);
         gridControl();
         document.getElementById("clear-canvas").style.display = 'block';
