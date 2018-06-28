@@ -49,14 +49,18 @@ submitBtn.addEventListener('click', function(evt){
     let inputHeight = document.getElementById("inputHeight").value; 
     let inputWidth = document.getElementById("inputWidth").value;
     let errorMsg = [
-        "Grid height should be less than or equal to 25", 
-        "Grid width should be less than or equal to 100"
+        "Grid height should be less than or equal to 40", 
+        "Grid width should be less than or equal to 100",
+        "Grid height should be greater than or equal to 5",
+        "Grid width should be greater than or equal to 5"
     ];
-    if ((inputHeight > 25) || (inputWidth > 100)) {
-        alert(`${inputHeight > 25 ? errorMsg[0] : ""} ${inputWidth > 100 ? errorMsg[1] : ""}`); 
+    if ((inputHeight > 40) || (inputWidth > 100)) {
+        alert(`- ${inputHeight > 40 ? errorMsg[0] : ""} - ${inputWidth > 100 ? errorMsg[1] : ""}`); 
         return;
-    }
-    else {
+    } else if ((inputHeight < 5 ) || (inputWidth < 5)) {
+        alert(`- ${inputHeight < 5 ? errorMsg[2] : ""} - ${inputWidth < 5 ? errorMsg[3] : ""}`); 
+        return;
+    } else {
         makeGrid(inputHeight, inputWidth);
         gridControl();
         document.getElementById("clear-canvas").style.display = 'block';
@@ -71,6 +75,7 @@ colorPicker.addEventListener('change', function(){
     if (!colours.includes(chosenColour)){ 
         colours.splice(0, 0, chosenColour);
     }
+
     clearTableRows("#palette tr");
 
     // Build and fill palette
@@ -111,8 +116,8 @@ function clearTableRows(querySelector){
  * @param {*int width} w 
  */
 function makeGrid(h, w){
-    let height = h || 10; 
-    let width = w || 40;
+    let height = h || 15; 
+    let width = w || 60;
     clearTableRows("#pixelCanvas tr");
     let x = 1; 
     while ( x <= height ){

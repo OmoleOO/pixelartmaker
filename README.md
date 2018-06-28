@@ -18,9 +18,9 @@
 
 ## Instructions
 
-* Drag + mouseover grid to paint.
-* Ctrl + mouseover grid to erase paint.
-* Shift + mouseover grid to temporarily suspend painting.
+* <b>To paint</b> - move mouse over grid .
+* <b>To erase paint</b> - hold down the Ctrl key + move mouse over grid.
+* <b>To temporarily suspend painting over the gird</b> - hold down the Shift key.
 
 
 Click [here](https://omoleoo.github.io/pixelartmaker/) to create your masterpiece.
