@@ -23,7 +23,7 @@
 * <b>To temporarily suspend painting over the gird</b> - hold down the Shift key.
 
 
-Click [here](https://omoleoo.github.io/pixelartmaker/) to create your masterpiece.
+Visit [https://omoleoo.github.io/pixelartmaker/](https://omoleoo.github.io/pixelartmaker/) to create your masterpiece.
 
 
 ## Contributing
