@@ -29,3 +29,4 @@ Click [here](https://omoleoo.github.io/pixelartmaker/) to create your masterpiec
 ## Contributing
 
 You're welcome to make contributions. Fork it and hack away!
+
